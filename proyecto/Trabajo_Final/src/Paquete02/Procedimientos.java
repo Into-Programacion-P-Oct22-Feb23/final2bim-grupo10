@@ -1,20 +1,26 @@
-package trabajo_final;
+package paquete02;
 
 import java.util.Scanner;
 
-public class trabajo_final {
-
-    public static String crearFacebook() {
+public class Procedimientos {
+    
+    public static void crearTwitter(){
         Scanner entrada = new Scanner(System.in);
-        String mensaje = "";
+        String usuario;
         String nombre;
+        String apellido;
         int edad;
         String ciudad;
         String pais;
         String correo;
+        String idioma;
 
         System.out.println("Ingrese su nombre de usuario:");
+        usuario = entrada.nextLine();
+        System.out.println("Ingrese sus nombres:");
         nombre = entrada.nextLine();
+        System.out.println("Ingrese sus apellidos:");
+        apellido = entrada.nextLine();
         System.out.println("Ingrese su edad:");
         edad = entrada.nextInt();
         entrada.nextLine();
@@ -22,99 +28,92 @@ public class trabajo_final {
         ciudad = entrada.nextLine();
         System.out.println("Ingrese su país:");
         pais = entrada.nextLine();
+        System.out.println("Ingrese su idioma:");
+        idioma = entrada.nextLine();
         System.out.println("Ingrese su correo electrónico:");
         correo = entrada.nextLine();
 
-        mensaje = String.format("Nombre de usuario: %s\n"
-                + "Edad: %d\n"
-                + "Ciudad: %s\n"
-                + "País: %s\n"
-                + "Correo electrónico: %s\n", nombre, edad, ciudad,
-                pais, correo);
-        return mensaje;
-    }
-
-    public static String crearWhatsapp() {
-        Scanner entrada = new Scanner(System.in);
-        String mensaje;
-        String nombre;
-        int edad;
-        String ciudad;
-        String pais;
-        int telefono;
-
-        System.out.println("Ingrese su nombre de usuario:");
-        nombre = entrada.nextLine();
-        System.out.println("Ingrese su número de teléfono:");
-        telefono = entrada.nextInt();
-        System.out.println("Ingrese su edad:");
-        edad = entrada.nextInt();
-        entrada.nextLine();
-        System.out.println("Ingrese su ciudad:");
-        ciudad = entrada.nextLine();
-        System.out.println("Ingrese su país:");
-        pais = entrada.nextLine();
-
-        mensaje = String.format("Nombre de usuario: %s\n"
-                + "Número de teléfono: %d\n"
-                + "Edad: %d\n"
-                + "Ciudad: %s\n"
-                + "País: %s\n", nombre, telefono, edad, ciudad,
-                pais);
-        return mensaje;
-    }
-
-    public static String crearSignal() {
-        Scanner entrada = new Scanner(System.in);
-        String mensaje;
-        String nombre;
-        int edad;
-        String ciudad;
-        String pais;
-        int telefono;
-        String hobby;
-
-        System.out.println("Ingrese su nombre de usuario:");
-        nombre = entrada.nextLine();
-        System.out.println("Ingrese su número de teléfono:");
-        telefono = entrada.nextInt();
-        System.out.println("Ingrese su edad:");
-        edad = entrada.nextInt();
-        entrada.nextLine();
-        System.out.println("Ingrese su ciudad:");
-        ciudad = entrada.nextLine();
-        System.out.println("Ingrese su país:");
-        pais = entrada.nextLine();
-        System.out.println("Ingrese su hobby principal:");
-        hobby = entrada.nextLine();
-
-        mensaje = String.format("Nombre de usuario: %s\n"
-                + "Número de teléfono: %d\n"
-                + "Edad: %d\n"
-                + "Ciudad: %s\n"
-                + "País: %s\n"
-                + "Hobby principal: %s\n", nombre, telefono,
-                edad, ciudad, pais, hobby);
-        return mensaje;
-
-    }
-
-    public static String crearFlickr() {
-        Scanner entrada = new Scanner(System.in);
-        String mensaje;
-        String correo;
-        String nombre;
-
-        System.out.println("Ingrese su nombre de usuario:");
-        nombre = entrada.nextLine();
-        System.out.println("Ingrese su correo electrónico:");
-        correo = entrada.nextLine();
-
-        mensaje = String.format("Usuario registrado con los siguientes datos: \n"
+        System.out.printf("Usuario registrado con los siguientes datos:\n"
                 + "Nombre de usuario: %s\n"
-                + "Correo electrónico: %s\n", 
+                + "Nombres: %s\n"
+                + "Apellidos: %s\n"
+                + "Edad: %d\n"
+                + "Ciudad: %s\n"
+                + "País: %s\n"
+                + "Idioma: %s\n"
+                + "Correo electrónico: %s\n", usuario, 
                 nombre, 
+                apellido, 
+                edad, 
+                ciudad,
+                pais, 
+                idioma, 
                 correo);
-        return mensaje;
+    }
+    
+    public static void crearTelegram(){
+        Scanner entrada = new Scanner(System.in);
+        String nombre;
+        int edad;
+        String ciudad;
+        String pais;
+        int telefono;
+        String interes;
+
+        System.out.println("Ingrese su nombre de usuario:");
+        nombre = entrada.nextLine();
+        System.out.println("Ingrese su número de teléfono:");
+        telefono = entrada.nextInt();
+        System.out.println("Ingrese su edad:");
+        edad = entrada.nextInt();
+        entrada.nextLine();
+        System.out.println("Ingrese su ciudad:");
+        ciudad = entrada.nextLine();
+        System.out.println("Ingrese su país:");
+        pais = entrada.nextLine();
+        System.out.println("Ingrese su área de interés:");
+        interes = entrada.nextLine();
+
+        System.out.printf("Usuario registrado con los siguientes datos:\n"
+                + "Nombre de usuario: %s\n"
+                + "Número de teléfono: %d\n"
+                + "Edad: %d\n"
+                + "Ciudad: %s\n"
+                + "País: %s\n"
+                + "Área de interés: %s\n", 
+                nombre, 
+                telefono,
+                edad, 
+                ciudad, 
+                pais, 
+                interes);
+    }
+    
+    public static void crearInstagram(){
+        Scanner entrada = new Scanner(System.in);
+        String nombre;
+        int edad;
+        String ciudad;
+        String correo;
+
+        System.out.println("Ingrese su nombre de usuario:");
+        nombre = entrada.nextLine();
+        System.out.println("Ingrese su edad:");
+        edad = entrada.nextInt();
+        entrada.nextLine();
+        System.out.println("Ingrese su ciudad:");
+        ciudad = entrada.nextLine();
+        System.out.println("Ingrese su correo electrónico:");
+        correo = entrada.nextLine();
+
+        System.out.printf("Usuario registrado con los siguientes datos:\n"
+                + "Nombre de usuario: %s\n"
+                + "Edad: %d\n"
+                + "Ciudad: %s\n"
+                + "Correo electrónico: %s\n", 
+                nombre,
+                edad, 
+                ciudad, 
+                correo);
     }
 }

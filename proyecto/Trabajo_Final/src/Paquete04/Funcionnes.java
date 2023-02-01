@@ -1,26 +1,20 @@
-package paquete01;
+package Paquete04;
 
 import java.util.Scanner;
 
-public class clase01 {
-    
-    public static void crearTwitter(){
+public class Funcionnes {
+
+    public static String crearFacebook() {
         Scanner entrada = new Scanner(System.in);
-        String usuario;
+        String mensaje = "";
         String nombre;
-        String apellido;
         int edad;
         String ciudad;
         String pais;
         String correo;
-        String idioma;
 
         System.out.println("Ingrese su nombre de usuario:");
-        usuario = entrada.nextLine();
-        System.out.println("Ingrese sus nombres:");
         nombre = entrada.nextLine();
-        System.out.println("Ingrese sus apellidos:");
-        apellido = entrada.nextLine();
         System.out.println("Ingrese su edad:");
         edad = entrada.nextInt();
         entrada.nextLine();
@@ -28,38 +22,32 @@ public class clase01 {
         ciudad = entrada.nextLine();
         System.out.println("Ingrese su país:");
         pais = entrada.nextLine();
-        System.out.println("Ingrese su idioma:");
-        idioma = entrada.nextLine();
         System.out.println("Ingrese su correo electrónico:");
         correo = entrada.nextLine();
 
-        System.out.printf("Usuario registrado con los siguientes datos: \n"
+        mensaje = String.format("Usuario registrado en Facebook con los "
+                + "siguientes datos:\n"
                 + "Nombre de usuario: %s\n"
-                + "Nombres: %s\n"
-                + "Apellidos: %s\n"
                 + "Edad: %d\n"
                 + "Ciudad: %s\n"
                 + "País: %s\n"
-                + "Idioma: %s\n"
-                + "Correo electrónico: %s\n", 
-                usuario, 
-                nombre, 
-                apellido, 
-                edad, 
+                + "Correo electrónico: %s\n",
+                nombre,
+                edad,
                 ciudad,
-                pais, 
-                idioma, 
+                pais,
                 correo);
+        return mensaje;
     }
-    
-    public static void crearTelegram(){
+
+    public static String crearWhatsapp() {
         Scanner entrada = new Scanner(System.in);
+        String mensaje;
         String nombre;
         int edad;
         String ciudad;
         String pais;
         int telefono;
-        String interes;
 
         System.out.println("Ingrese su nombre de usuario:");
         nombre = entrada.nextLine();
@@ -72,46 +60,81 @@ public class clase01 {
         ciudad = entrada.nextLine();
         System.out.println("Ingrese su país:");
         pais = entrada.nextLine();
-        System.out.println("Ingrese su área de interés:");
-        interes = entrada.nextLine();
 
-        System.out.printf("Usuario registrado con los siguientes datos: \n"
+        mensaje = String.format("Usuario registrado en Whatsapp con los "
+                + "siguientes datos:\n"
                 + "Nombre de usuario: %s\n"
                 + "Número de teléfono: %d\n"
                 + "Edad: %d\n"
                 + "Ciudad: %s\n"
-                + "País: %s\n"
-                + "Área de interés: %s\n", 
-                nombre, 
+                + "País: %s\n",
+                nombre,
                 telefono,
-                edad, 
-                ciudad, 
-                pais, 
-                interes);
+                edad,
+                ciudad,
+                pais);
+        return mensaje;
     }
-    
-    public static void crearInstagram(){
+
+    public static String crearSignal() {
         Scanner entrada = new Scanner(System.in);
+        String mensaje;
         String nombre;
         int edad;
         String ciudad;
-        String correo;
+        String pais;
+        int telefono;
+        String hobby;
 
         System.out.println("Ingrese su nombre de usuario:");
         nombre = entrada.nextLine();
+        System.out.println("Ingrese su número de teléfono:");
+        telefono = entrada.nextInt();
         System.out.println("Ingrese su edad:");
         edad = entrada.nextInt();
         entrada.nextLine();
         System.out.println("Ingrese su ciudad:");
         ciudad = entrada.nextLine();
+        System.out.println("Ingrese su país:");
+        pais = entrada.nextLine();
+        System.out.println("Ingrese su hobby principal:");
+        hobby = entrada.nextLine();
+
+        mensaje = String.format("Usuario registrado en Signal con los siguientes"
+                + "datos:\n"
+                + "Nombre de usuario: %s\n"
+                + "Número de teléfono: %d\n"
+                + "Edad: %d\n"
+                + "Ciudad: %s\n"
+                + "País: %s\n"
+                + "Hobby principal: %s\n",
+                nombre,
+                telefono,
+                edad,
+                ciudad,
+                pais,
+                hobby);
+        return mensaje;
+
+    }
+
+    public static String crearFlickr() {
+        Scanner entrada = new Scanner(System.in);
+        String mensaje;
+        String correo;
+        String nombre;
+
+        System.out.println("Ingrese su nombre de usuario:");
+        nombre = entrada.nextLine();
         System.out.println("Ingrese su correo electrónico:");
         correo = entrada.nextLine();
 
-        System.out.printf("Usuario registrado con los siguientes datos: \n"
+        mensaje = String.format("Usuario registrado en Flickr con los siguientes"
+                + " datos:\n"
                 + "Nombre de usuario: %s\n"
-                + "Edad: %d\n"
-                + "Ciudad: %s\n"
-                + "Correo electrónico: %s\n", nombre,
-                edad, ciudad, correo);
+                + "Correo electrónico: %s\n",
+                nombre,
+                correo);
+        return mensaje;
     }
 }
